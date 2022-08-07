@@ -1,8 +1,14 @@
 # ### A simple basic-purpose makefile ###
-# 1) Change the exec name.
+
+## Works w/ multiple C source files, but
+## BEWARE: It only creates ONE binary
+
+### How to USE
+### Change the binary name (1)
 
 # Executable
-EXEC = name
+## Change _ with the bin name you want (1)
+EXEC = _
 
 # Binary
 BIN = ./bin/$(EXEC)
@@ -31,7 +37,7 @@ $(BIN): $(OBJ)
 	@ $(CC) $(OBJ) -o $@ $(CCFLAGS)
 	@ echo 'Finished building $@.'
 
-./obj/%.o: ./src/%.c
+./obj/%.o: ./src/%.c ./src/%.h
 	@ echo 'Building $@ from $<...'
 	@ $(CC)  -c $< -o $@ $(CCFLAGS)
 	@ echo 'ok'
