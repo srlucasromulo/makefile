@@ -29,8 +29,8 @@ CCFLAGS = $(CFLAGS)
 
 # Compiling and linking
 #
-all: objFolder binFolder $(BIN)
 .PHONY: all
+all: objFolder binFolder $(BIN)
 
 $(BIN): $(OBJ)
 	@ echo 'Building binary $@ using $(CC)...'
@@ -56,9 +56,9 @@ binFolder:
 		echo 'ok'; \
 	fi
 
+.PHONY: clean
 clean:
 	@ echo 'Cleanning up...'
 	@ rm -rf ./obj/* ./obj
 	@ rm -rf ./bin/* ./bin
 	@ echo 'ok'
-.PHONY: clean
