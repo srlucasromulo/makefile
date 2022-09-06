@@ -7,8 +7,8 @@
 ### Change the binary name (1)
 
 # Executable
-## Change _ with the bin name you want (1)
-EXEC = _
+## Change "exec" to the bin name you want (1)
+EXEC = exec
 
 # Binary
 BIN = ./bin/$(EXEC)
