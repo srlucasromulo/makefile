@@ -29,7 +29,7 @@ CCFLAGS = $(CFLAGS)
 
 # Compiling and linking
 #
-.PHONY: all
+.PHONY: all objFolder binFolder
 all: objFolder binFolder $(BIN)
 
 $(BIN): $(OBJ)
