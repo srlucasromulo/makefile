@@ -37,7 +37,7 @@ $(BIN): $(OBJ)
 	@ $(CC) $(OBJ) -o $@ $(CCFLAGS)
 	@ echo 'Finished building $@.'
 
-./obj/%.o: ./src/%.c ./src/%.h
+./obj/%.o: ./src/%.c ./src/*.h
 	@ echo 'Building $@ from $<...'
 	@ $(CC)  -c $< -o $@ $(CCFLAGS)
 	@ echo 'ok'
