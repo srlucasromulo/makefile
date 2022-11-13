@@ -13,6 +13,5 @@ mv *.c *.h ./src/
 
 ##### Compile and execute:
 ```
-make
-./bin/*
+make run
 ```
