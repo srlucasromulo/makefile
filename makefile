@@ -56,9 +56,12 @@ binFolder:
 		echo 'ok'; \
 	fi
 
-.PHONY: clean
+.PHONY: clean run
 clean:
 	@ echo 'Cleanning up...'
 	@ rm -rf ./obj/* ./obj
 	@ rm -rf ./bin/* ./bin
 	@ echo 'ok'
+
+run: all
+	@ BIN
